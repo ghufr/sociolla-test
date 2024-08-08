@@ -3458,7 +3458,7 @@ export default {
       {
         _id: '5d3ac301a6992471b7c972b9',
         my_soco_sql_id: 1190,
-        name: 'TRESemmé',
+        name: 'TRESemme',
         logo: 'https://s3-ap-southeast-1.amazonaws.com/soc-newplatform/brand/exqkSpWwECH8r7htxqcAlNtBVtL4MCN6ZuLCfzXf.jpeg',
         slug: '1190_tresemme',
         url: '',

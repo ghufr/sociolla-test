@@ -1,13 +1,20 @@
-import { unsecureFetch } from './base';
+import axios from 'axios';
 
 const HOST = 'sociolla.com'; // TODO: use config to support multiple env
-const CATALOG_API = `https://catalog-api.${HOST}`;
+const CATALOG_API = `https://catalog-api.${HOST}/v3`;
 
-// TODO: API kena CORS
-const fetchBrands = (params?: any) =>
-  unsecureFetch(CATALOG_API + '/brands', params);
+const instance = axios.create({
+  baseURL: CATALOG_API,
+});
 
-const fetchBrandsLetters = (params?: any) =>
-  unsecureFetch(CATALOG_API + '/brands/letters', params);
+const fetchBrands = (params?: any, mock?: boolean) =>
+  mock
+    ? require('../mock/featuredBrands').default
+    : instance.get('/brands', { params });
+
+const fetchBrandsLetters = (params?: any, mock?: boolean) =>
+  mock
+    ? require('../mock/brandsLetters').default
+    : instance.get('/brands/letters', { params });
 
 export { fetchBrands, fetchBrandsLetters };

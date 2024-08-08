@@ -10,10 +10,12 @@ export default function WishListScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, alignItems: 'center', justifyContent: 'center'
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   title: {
     fontSize: 16,
-    fontWeight: '700'
-  }
+    fontWeight: '700',
+  },
 });
