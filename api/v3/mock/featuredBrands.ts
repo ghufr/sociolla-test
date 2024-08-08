@@ -1,0 +1,107 @@
+export default {
+  success: true,
+  data: [
+    {
+      _id: '621726a8a2bd6510387feeb3',
+      name: 'Skintific',
+      featured_text: '',
+      logo: 'https://images.soco.id/ef6bba1c-8313-4b0c-a6dd-72296dd3a7b9-.jpg',
+      slug: '1347_skintific',
+    },
+    {
+      _id: '5f436613eaf2b6b4d3958938',
+      name: "I'm From",
+      featured_text: '',
+      logo: 'https://images.soco.id/d4ca4d2e-42e9-4687-b974-277d2d099b94-.jpg',
+      slug: '15048_im-from',
+    },
+    {
+      _id: '614afa2f62426aaa49f8964f',
+      name: 'barenbliss',
+      featured_text: '',
+      logo: 'https://images.soco.id/4018e45b-018c-4b4d-9cc6-ceedff9847bd-.jpg',
+      slug: '1284_barenbliss',
+    },
+    {
+      _id: '5d3ac308a6992471b7c97e86',
+      name: 'Laneige',
+      logo: 'https://images.soco.id/29852942-ca11-457b-8ecb-c7dcbbe2cadb-.jpg',
+      slug: '101_laneige',
+      featured_text: '',
+    },
+    {
+      _id: '5f92628d91fef2cec7caa35d',
+      name: 'Carasun',
+      featured_text: '',
+      logo: 'https://images.soco.id/1565bdac-5dbf-4c29-bd13-08a4435fddf8-.jpg',
+      slug: '15200_carasun',
+    },
+    {
+      _id: '5d3ac307a6992471b7c97996',
+      name: 'ESQA',
+      logo: 'https://images.soco.id/0ec2f019-5174-4b7f-94ff-d271162e2053-.jpg',
+      slug: '275_esqa',
+      featured_text: '',
+    },
+    {
+      _id: '6510fae507d9f80342bc6d05',
+      name: 'Speaks To Me',
+      featured_text: '',
+      logo: 'https://images.soco.id/3a592a28-f446-4305-bd99-f14724f11f43-.jpg',
+      slug: '15705_speaks-to-me',
+    },
+    {
+      _id: '5d3ac307a6992471b7c97adc',
+      name: 'Mediheal',
+      logo: 'https://images.soco.id/35e197d4-390e-4a41-b3cc-bad4ebd30cff-.jpg',
+      slug: '235_mediheal',
+      featured_text: '',
+    },
+    {
+      _id: '5d3ac302a6992471b7c9738c',
+      name: 'Sukin',
+      logo: 'https://images.soco.id/751dec44-1873-4f1e-a4d3-3166a5730bf1-.jpg',
+      slug: '646_sukin',
+      featured_text: '',
+    },
+    {
+      _id: '655b378274ba9a8425e118d5',
+      name: 'Espoir',
+      featured_text: '',
+      logo: 'https://images.soco.id/04066188-f2fc-4f7e-b197-710d2c23c4ff-.jpg',
+      slug: '15729_espoir',
+    },
+  ],
+  processingTimes: {
+    overall: {
+      startTime: [82837, 197066653],
+      currentTime: '2024-08-08T15:13:43.810Z',
+      timeTaken: 29.692905,
+    },
+    middlewareLocale: {
+      startTime: [82837, 199558762],
+      currentTime: '2024-08-08T15:13:43.812Z',
+      timeTaken: 19.722284,
+    },
+    attach: {
+      startTime: [82837, 219797693],
+      currentTime: '2024-08-08T15:13:43.832Z',
+      timeTaken: 2.827888,
+    },
+    middlewareCheckAccess: {
+      startTime: [82837, 222952541],
+      currentTime: '2024-08-08T15:13:43.835Z',
+      timeTaken: 0.242086,
+    },
+    middlewareModifyRequest: {
+      startTime: [82837, 223198319],
+      currentTime: '2024-08-08T15:13:43.836Z',
+      timeTaken: 0.005506,
+    },
+    middlewareModifyResponse: {
+      startTime: [82837, 226702037],
+      currentTime: '2024-08-08T15:13:43.839Z',
+      timeTaken: 0.055481,
+    },
+  },
+};
