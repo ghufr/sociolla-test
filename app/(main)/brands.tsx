@@ -100,6 +100,10 @@ const BrandSearch = ({
   const listRef = useRef<SectionList>(null);
   const [filter, setFilter] = useState<string>('');
 
+  useEffect(() => {
+    setFilter('');
+  }, [data]);
+
   if (!data) {
     return (
       <View style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -188,7 +192,7 @@ const BrandSearch = ({
       )}
       {flattenedData.length > 0 && (
         <SectionList
-          style={{ height: 380 }}
+          style={{ maxHeight: 380 }}
           ref={listRef}
           sections={flattenedData}
           initialNumToRender={10}
@@ -246,29 +250,23 @@ export default function BrandScreen() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // Need to mock the api due to invalid request
-      const _featuredBrand = await fetchBrands(
-        {
-          filter: '{"is_featured":true}',
-          fields: '_id+name+slug+logo+featured_text',
-          skip: 0,
-          limit: 15,
-          sort: '-featured_created_at',
-        },
-        true,
-      );
-      const _brandLetters = await fetchBrandsLetters(
-        {
-          fields: ['name', 'logo', 'slug'],
-          limit: 100,
-          sort: 'name',
-        },
-        true,
-      );
+      const _featuredBrand = await fetchBrands({
+        filter: JSON.stringify({ is_featured: true }),
+        fields: '_id name slug logo featured_text',
+        skip: 0,
+        limit: 15,
+        sort: '-featured_created_at',
+      });
+      console.log(_featuredBrand.data);
+      const _brandLetters = await fetchBrandsLetters({
+        fields: JSON.stringify(['name', 'logo', 'slug']),
+        limit: 100,
+        sort: 'name',
+      });
 
-      setFeaturedBrands(_featuredBrand.data);
-      setBrandLetters(_brandLetters.data);
-      setCountries(sortKeysAlphabetically(groupByCountry(_brandLetters.data)));
+      setFeaturedBrands(_featuredBrand?.data);
+      setBrandLetters(_brandLetters?.data);
+      setCountries(sortKeysAlphabetically(groupByCountry(_brandLetters?.data)));
     };
     fetchData();
   }, []);

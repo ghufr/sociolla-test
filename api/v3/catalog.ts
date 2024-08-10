@@ -10,11 +10,11 @@ const instance = axios.create({
 const fetchBrands = (params?: any, mock?: boolean) =>
   mock
     ? require('../mock/featuredBrands').default
-    : instance.get('/brands', { params });
+    : instance.get('/brands', { params }).then((res) => res.data);
 
 const fetchBrandsLetters = (params?: any, mock?: boolean) =>
   mock
     ? require('../mock/brandsLetters').default
-    : instance.get('/brands/letters', { params });
+    : instance.get('/brands/letters', { params }).then((res) => res.data);
 
 export { fetchBrands, fetchBrandsLetters };
