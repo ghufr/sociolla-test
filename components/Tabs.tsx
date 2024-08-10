@@ -1,5 +1,5 @@
 import { ReactElement, useState } from 'react';
-import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface TabListItem {
   title: string;
