@@ -12,7 +12,7 @@ interface TabsProps {
 
 const Tabs = ({ tabList }: TabsProps) => {
   const [activeTab, setActiveTab] = useState(0);
-  const activeContent = tabList[activeTab].content;
+  const ActiveContent = tabList[activeTab].content;
   return (
     <View>
       <View style={styles.tabContainer}>
@@ -33,7 +33,7 @@ const Tabs = ({ tabList }: TabsProps) => {
           );
         })}
       </View>
-      {activeContent}
+      <ActiveContent key={activeTab} />
     </View>
   );
 };
