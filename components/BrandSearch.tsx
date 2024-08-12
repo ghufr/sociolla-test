@@ -26,10 +26,6 @@ const BrandSearch = ({
   const [filter, setFilter] = useState<string>('');
   const { height: screenHeight } = useWindowDimensions();
 
-  useEffect(() => {
-    setFilter('');
-  }, [data]);
-
   if (!data) {
     return (
       <View style={{ justifyContent: 'center', alignItems: 'center' }}>
