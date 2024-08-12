@@ -52,7 +52,7 @@ export default function BrandScreen() {
           tabList={[
             {
               title: 'Brand Name',
-              content: (
+              content: () => (
                 <BrandSearch
                   data={brandLetters}
                   placeholder='Search brand...'
@@ -62,7 +62,7 @@ export default function BrandScreen() {
             },
             {
               title: 'Brand Origins',
-              content: (
+              content: () => (
                 <BrandSearch
                   data={countries}
                   placeholder='Search country...'
